@@ -1,3 +1,36 @@
+# Migrating-an-example-MTB-2.x-to-version-3.x-
+
+
+This repo contains the results of my migration of the the GitHub - Infineon/mtb-example-psoc6-dual-cpu-ipc-pipes on the Infineon repo.  This example is not available as an example project available yet for the PSoC 62S4 BSP examples. I was able to get it from the Infineon GitHub repo here https://github.com/Infineon/mtb-example-psoc6-dual-cpu-ipc-pipes..I was able to get this implemented with my MTB 2.4 version, but I needed to migrate it to MTB 3.0, to be able to use it in my project.
+
+ This example demonstrates how to use the inter-processor communication (IPC) driver to implement a message pipe in PSoC 6 MCU. The pipe is used to send messages between CPUs.
+
+The results of this exercise is to get another dual-core IPC example besides the only available semaphore example. I found this KBA article from October  06,2022 at  KBA: Migrating ModusToolbox applications from version 2.x to version 3.x – KBA236134
+
+KBA236134 is a technical article or knowledge base article (KBA) that provides guidelines and instructions on how to migrate applications created using version 2.x of ModusToolboxTm to version 3.x of the tool. The article outlines the steps involved in the migration process, including upgrading the software, modifying the makefile, and updating the code to use the new APIs and libraries in version 3.x. The article also provides important information on compatibility issues and the implications of migration, such as the inability to use version 2.x after migrating to version 3.x.
+
+I got thru the Article and received an error on step 7
+Step 6:  Import the application
+Use a supported IDE or the command line to import the application. This example uses the Eclipse IDE for ModusToolbox.
+In the Eclipse IDE, import the application using the Import Existing Application In-Place link in the Quick Panel.
+Browse to the location for the migrated application to import.
+RESULTS:
+
+PROBLEM1 I received an error as follows
+
+the error in the console:
+
+Import scheduled. As projects are imported, they will appear in Project Explorer.
+Problem creating subproject mtb-example-psoc6-dual-cpu-ipc-pipes-master: Error while executing the "Dual-CPU_Empty_PSoC6_App" operation
+Problem creating project at C:\CY8_psoc6\WP_MIGRATION2\mtb-example-psoc6-dual-cpu-ipc-pipes-master
+Problem getting project description for app_cm0p
+Problem getting project description for app_cm4
+
+
+
+
+
+what follows is the original README.md from the original example
 # PSoC&trade; 6 MCU: Dual-CPU IPC pipes
 
 This example demonstrates how to use the inter-processor communication (IPC) driver to implement a message pipe in PSoC&trade; 6 MCU. The pipe is used to send messages between CPUs.
